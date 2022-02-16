@@ -6,7 +6,7 @@
 program program15
     implicit none
     
-    integer :: n, nprev, sum, lim, i, flag
+    integer :: n, nprev, sum, lim
 
     print *, "Ingrese un numero entero para limitar la serie de fibonacci"
     read (*,*) lim
