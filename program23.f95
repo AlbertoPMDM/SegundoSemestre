@@ -52,7 +52,9 @@ program program23
         end do
 
         if (flag .eqv. .true.) then
-            CALL imprimir_matriz(n, temps)
+            open(unit=1, file="test.txt")
+            CALL imprimir_matriz(n, temps, 1)
+            close(1)
             exit
         end if
 
@@ -102,18 +104,18 @@ end do
 temps(3,8) = 100.0
 end subroutine temp_init
 
-subroutine imprimir_matriz(n, matriz)
+subroutine imprimir_matriz(n, matriz, unidad)
     implicit none
 
-    integer, intent(in) :: n
+    integer, intent(in) :: n, unidad
     real, dimension(n,n) :: matriz
     integer :: i, j
 
     do i = 1, n
         do j = 1, n
-            write(*,"(f8.2)", advance="no") matriz(i, j)
+            write(unidad,"(f8.2)", advance="no") matriz(i, j)
         end do
-        write(*,*)
+        write(unidad,*)
     end do
 
 end subroutine imprimir_matriz
