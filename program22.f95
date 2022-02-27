@@ -24,7 +24,7 @@ program program22
     print *, "Introduzca n para una matriz nxn"
     read(*,*) n
 
-    print *, "Introduzca el numero al que desea elevar la matriz"
+    print *, "Introduzca el numero al que desea elevar la matriz, mayor a 0"
     read(*,*) exp
 
     allocate(a(n,n))
@@ -78,7 +78,7 @@ subroutine imprimir_matriz(n, matriz, unidad)
 
     do i = 1, n
         do j = 1, n
-            write(unidad,"(f8.2)", advance="no") matriz(i, j)
+            write(unidad,"(f10.2)", advance="no") matriz(i, j)
         end do
         write(unidad,*)
     end do
