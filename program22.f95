@@ -3,7 +3,7 @@
 ! Hacer un programa que pida al usuario una matriz n por n, y 
 ! una potencia a la cual elevarla
 
-! Elevar la matriz e imprimir la original y la segunda
+! Elevar la matriz e imprimir la original y la segunda en un archivo de texto
 
 program program22
     implicit none
