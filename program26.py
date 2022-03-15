@@ -2,6 +2,8 @@
 
 #funciones (11 ma. en teams)
 
+# chtm fernanda, me tienes hasta la verga te voy a matar te voy a machetear
+# te voya te voya 
 def f(s:float) -> float:
 
     if s>0:
