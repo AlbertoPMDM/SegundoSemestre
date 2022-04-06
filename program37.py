@@ -48,7 +48,7 @@ def linReg(a:list,b:list)->list:
     
     n = (
         (
-            npy.cumsum(b) - m*npy.cumsum(a)
+            npy.cumsum(b) - m*npy.cumsum(a  )
         ) / (
             npy.size(a)
         )
