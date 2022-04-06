@@ -45,6 +45,38 @@ module npy
         reg(1) = m
         reg(2) = n
     end function linReg
+
+    function append(element, array) result(a_array)
+        implicit none
+        real, allocatable, dimension(:), intent(in) :: array
+        real, intent(in) :: element
+        real, allocatable, dimension(:):: a_array
+        real, allocatable, dimension(:) :: tmp_array
+        integer :: i
+
+        if (allocated(array)) then
+
+            a_array = array
+
+            call move_alloc(a_array, tmp_array)
+
+            allocate(a_array(SIZE(array)+1))
+
+            do i=1, size(array)
+                a_array(i) = tmp_array(i)
+            end do
+
+            a_array(size(a_array)) = element
+
+        else
+
+            allocate(a_array(1))
+            a_array(1) = element
+
+        end if
+            
+        
+    end function append
     
 end module npy
 
@@ -52,15 +84,17 @@ program program37
     use npy
     implicit none
 
-
-    integer, parameter :: N = 6
-    real, dimension(N):: x, y
-    integer :: i
+    real, allocatable, dimension(:):: x, y
+    real :: x_tmp, y_tmp
+    integer :: io
 
     open(file = 'test2.csv', unit = 10)
 
-    do i=1, N
-        read(10, *) x(i), y(i)
+    do
+        read(10, fmt = *, IOstat = io) x_tmp, y_tmp
+        if (io /= 0) exit
+        x = append(x_tmp, x)
+        y = append(y_tmp,y)
     end do
 
     print *, x
