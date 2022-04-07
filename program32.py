@@ -32,6 +32,4 @@ for i in range(1,10):
 
 print(np.sin(np.deg2rad(60)))
 
-print("0.864556644")
-
 print('para n=9 queda identico a la funcion de numpy')
