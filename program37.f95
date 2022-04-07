@@ -47,6 +47,7 @@ module npy
     end function linReg
 
     function append(element, array) result(a_array)
+        ! UWU
         implicit none
         real, allocatable, dimension(:), intent(in) :: array
         real, intent(in) :: element
@@ -85,6 +86,7 @@ program program37
     implicit none
 
     real, allocatable, dimension(:):: x, y
+    real, dimension(2) :: reg
     real :: x_tmp, y_tmp
     integer :: io
 
@@ -97,9 +99,7 @@ program program37
         y = append(y_tmp,y)
     end do
 
-    print *, x
-    print *, y
-
-    print *, linReg(x, y)
+    reg = linReg(x, y)
+    write(*,'(f7.4, a, f7.4)') reg(1), 'x+', reg(2)
 
 end program program37

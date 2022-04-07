@@ -55,5 +55,6 @@ def linReg(a:list,b:list)->list:
     )
 
     return (m,n)
-
-print(linReg(x,y))
+    
+REG = linReg(x,y)
+print('{}x+{}'.format(REG[0], REG[1]))
