@@ -148,6 +148,7 @@ program program38
     print *, 'introduce el error maximo permitido para la aproximacion'
     read(*,*) delta
 
+    print *, 'la raiz esta en x='
     print *, approximate(a, r, delta)
 
 end program program38
