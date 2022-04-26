@@ -1,5 +1,5 @@
 a.exe
-.vscode/launch.json
+.vscode
 test.f95
 hello.f95
 a.out
@@ -13,3 +13,6 @@ ejemplo1.csv
 test2.csv
 npy.mod
 polinomialbisection.mod
+
+*.exe
+*.mod
