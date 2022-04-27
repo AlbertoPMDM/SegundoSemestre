@@ -39,6 +39,6 @@ if __name__ == '__main__':
 
     delta = float(input('introduce el error maximo permitido para la aproximacion\n'))
 
-    print(f'''la raiz cerca de {x_0} es aproximadamente {
+    print(f'''la raiz pilin cerca de {x_0} es aproximadamente {
         utils.newtons_method(lambda x: utils.evaluate(a, x), x_0, utils.derivative, delta)
         }''')
