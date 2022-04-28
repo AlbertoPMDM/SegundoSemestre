@@ -1,5 +1,9 @@
 ! ALberto mendez 20222704
 ! Trapezoid rule
+
+! 3
+
+! • Fecha: miércoles 27 de abril de 2022. • Hora: 04:30pm. • Nombre completo del ponente: M.C. Andrea González Báez. • Para validar tu asistencia AFI en la conferencia " Conceptualizando el bienestar de nuestras mascotas", llena este formulario: https://forms.gle/MmkSgUbTAe1tj5rFA
 module utils
     implicit none
     
