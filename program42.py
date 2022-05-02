@@ -56,5 +56,5 @@ if __name__ == '__main__':
     r.append(float(input('introduce el limite superior de integracion\n')))
 
     print(f'''la integral cerca de x = {r[0]} a x = {r[1]} es aproximadamente {
-        utils.poly3_integrate(r[0], r[1], a)
+        utils.poly3_integrate(r[0], r[1], 1,  a)
         }''')

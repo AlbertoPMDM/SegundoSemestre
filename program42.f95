@@ -126,9 +126,6 @@ program program40
     print *, 'introduce el limite superior de integracion: '
     read(*,*) b
 
-    print *, 'introduce el numero de particiones (se multiplicara por 3)'
-    read(*,*) n
-
     print *, poly3_integrate(a, b, 1, cfs)
 
 end program program40
