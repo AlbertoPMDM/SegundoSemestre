@@ -58,11 +58,11 @@ contains
         n_new = n*3
         insum = evaluate(cfs, a) + evaluate(cfs, b)
         p = partition(a, b, n_new)
-        do i = 2, SIZE(p)-1
+        do i = 1, SIZE(p)-2
             if ( mod(i,3)==0 ) then
-                insum = insum + 2*evaluate(cfs, p(i))
+                insum = insum + 2*evaluate(cfs, p(i+1))
             else
-                insum = insum + 3*evaluate(cfs, p(i))
+                insum = insum + 3*evaluate(cfs, p(i+1))
             end if
         end do
 
@@ -129,7 +129,6 @@ program program40
     print *, 'introduce el numero de particiones (se multiplicara por 3)'
     read(*,*) n
 
-    print *, 'la integral en el rango dado es aproximadamente: '
-    print *, poly3_integrate(a, b, n, cfs)
+    print *, poly3_integrate(a, b, 1, cfs)
 
 end program program40
